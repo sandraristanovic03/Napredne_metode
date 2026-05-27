@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Web Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 90vh;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 20px;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      border: none;
+      border-radius: 10px;
+      background: #38bdf8;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #0ea5e9;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 80px 60px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 20px;
+      transition: 0.3s;
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      background: rgba(255,255,255,0.03);
+    }
+
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MySite</div>
+    <nav>
+      <a href="#">Početna</a>
+      <a href="#">O nama</a>
+      <a href="#">Usluge</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Modern HTML Stranica</h1>
+    <p>
+      Ovo je moderna i responsive HTML stranica sa elegantnim dizajnom,
+      karticama, animacijama i modernim izgledom pogodnim za studentske projekte,
+      portfolio ili prezentaciju.
+    </p>
+    <button class="btn" onclick="showMessage()">Klikni Ovde</button>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Brz Dizajn</h3>
+      <p>Moderan izgled sa responsive rasporedom za sve uređaje.</p>
+    </div>
+
+    <div class="card">
+      <h3>HTML + CSS + JS</h3>
+      <p>Jednostavna struktura pogodna za dalje uređivanje i nadogradnju.</p>
+    </div>
+
+    <div class="card">
+      <h3>Animacije</h3>
+      <p>Hover efekti i tranzicije za profesionalniji izgled sajta.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Modern Web Page | Napravljeno u HTML/CSS/JavaScript
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert('HTML stranica uspešno radi!');
+    }
+  </script>
+
+</body>
+</html>
